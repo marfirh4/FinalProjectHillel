@@ -82,27 +82,7 @@ const userSel_3 = `
                     </p>
                 </div>
 `
-const userSel_4 = `
-                <div class="users selected_user">
-                    <div class="user_block">
-                        <div class="user">
-                            <img src="img/third_user.png" alt="first_user" width="50" height="50">
-                            <div class="user_info">
-                                <h5>Kim Young Jou</h5>
-                                <h6>Seoul, South Korea</h6>
-                            </div>
-                        </div>
-                        <div class="user_score">
-                            <h5>4,5</h5>
-                            <img src="img/score.png" alt="score" width="13" height="12">
-                        </div>
-                    </div>
-                    <p>
-                        “This is very unusual for my business that currently requires a virtual private network that has high security.”.
-                    </p>
-                </div>
-`
-let usersSel_array = [userSel_1, userSel_2, userSel_3, userSel_4]
+let usersSel_array = [userSel_1, userSel_2, userSel_3]
 
 const user_1 = `
                 <div class="users other_user">
@@ -164,28 +144,8 @@ const user_3 = `
                     </p>
                 </div>
 `
-const user_4 = `
-                <div class="users other_user">
-                    <div class="user_block">
-                        <div class="user">
-                            <img src="img/third_user.png" alt="first_user" width="50" height="50">
-                            <div class="user_info">
-                                <h5>Kim Young Jou</h5>
-                                <h6>Seoul, South Korea</h6>
-                            </div>
-                        </div>
-                        <div class="user_score">
-                            <h5>4,5</h5>
-                            <img src="img/score.png" alt="score" width="13" height="12">
-                        </div>
-                    </div>
-                    <p>
-                        “This is very unusual for my business that currently requires a virtual private network that has high security.”.
-                    </p>
-                </div>
-`
 
-let users_array = [user_1, user_2, user_3, user_4]
+let users_array = [user_1, user_2, user_3]
 
 function loadDots() {
     for (let i = 1; i <= usersSel_array.length; i++) {
