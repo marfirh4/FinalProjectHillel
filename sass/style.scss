@@ -1,0 +1,1090 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');    
+$secondaryText: #4F5665;
+$secondaryShadow: #999999;
+$mainText: #0B132A;
+$warnText: #F53855;
+$buttonColor: #F53838;
+$dotColor: #DDE0E4;
+$buttonShadowColor: rgba(171,38,38,1);
+
+@mixin activeButtonTheme ($color: white, $bgclo: $buttonColor) {
+    background-color: $bgclo;
+    color: $color;
+}
+@mixin nonActiveButtonTheme ($color: $buttonColor, $bgclo: white){
+    background-color: $bgclo;
+    color: $color;
+}
+@mixin warnButton ($color: $warnText, $border: 1px solid $warnText, $bgclo: white){
+    color: $color;
+    border: $border;
+    background-color: $bgclo;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Rubik', sans-serif;
+}
+header {
+    padding: 50px 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+h1, h2, h3, h4, h5, .sign_i {
+    color: $mainText;
+}
+p {
+    font-size: 16px;
+}
+  
+    
+h5, li, p, a {
+    color: $secondaryText;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo_name, .sign_i, .met_heading, .choose_heading, .network h1 {
+    font-weight: 500;
+}
+.logo_name {
+    margin-left: 10px;
+    font-size: 20px;
+}
+a {
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 19px;
+    transition-property: text-shadow;
+    transition-duration: 0.1s;
+    &:hover {
+        text-shadow: 0px 3px 2px $secondaryShadow;
+    }
+}
+.nav_element {
+    margin-right: 40px;
+    text-decoration: none;
+}
+#last_element {
+    margin-right: 0;
+}
+.sign_i {
+    margin-right: 30px;
+}
+.sign_u {
+    @include warnButton();
+    font-size: 14px;
+    font-weight: 600;
+    padding: 13px 45px;
+    border-radius: 50px;
+    position: relative;
+    top: 0;
+    transition-property: box-shadow, top;
+    transition-duration: 0.5s;
+    &:hover {
+        box-shadow: 0px 3px 0px 0px $buttonShadowColor;
+        top: -3px;
+    }
+    &:active {
+        box-shadow: none;
+        top: 0;
+    }
+}
+.meating {
+    margin-top: 70px;
+    margin-left: 150px;
+    margin-right: 150px;
+    display: flex;
+    align-items: center;
+}
+.text_met_block {
+    max-width: 555px;
+    margin-right: 40px;
+}
+.met_heading {
+    max-width: 100%;
+    font-size: 50px;
+    line-height: 70px;
+}
+.met_text {
+    max-width: 100%;
+    line-height: 30px;
+    margin-top: 20px;
+}
+.start_button {
+    @include activeButtonTheme;
+    margin-top: 50px;
+    width: 250px;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    &:hover + .btn_shadow {
+        opacity: 1;
+    }
+}
+.btn_shadow {
+    position: absolute;
+    width: 211.83px;
+    height: 60px;
+    left: 169.09px;
+    top: 525.06px;
+    
+    background: rgba(245, 56, 56, 0.35);
+    opacity: 0;
+    filter: blur(27px);
+    border-radius: 10px;
+    z-index: -1;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+}
+.properties {
+    max-width: 1140px;
+    height: 200px;
+    margin: 50px 150px;
+    display: flex;
+    align-items: center;
+    padding-left: 91px;
+    padding-right: 91px;
+    border-radius: 10px;
+    background-color: white;
+}
+.user_prop_block, .location_prop_block, .server_prop_block {
+    max-width: max-content;
+    display: flex;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+.user_prop_block {
+    padding-right: 134px;
+}
+.location_prop_block {
+    padding-left: 113px;
+    padding-right: 134px;
+    border-left: 3px solid #EEEFF2;
+    border-right: 3px solid #EEEFF2;
+}
+.server_prop_block {
+    padding-left: 91px;
+}
+
+.icon_user, .icon_location, .icon_server{
+    margin-right: 35px;
+}
+.prop_heading {
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+.prop_text {
+    font-weight: 400;
+    font-size: 20px;
+}
+.properties_shadow {
+    position: absolute;
+    width: 1068.84px;
+    height: 189.22px;
+    left: 185.58px;
+    top: 717.35px;
+
+    background: #0D1025;
+    opacity: 0.06;
+    filter: blur(57px);
+    border-radius: 10px;
+    z-index: -1;
+}
+.features {
+    margin: 0 auto;
+    margin-top: 95px;
+    margin-bottom: 125px;
+    width: max-content;
+    display: flex;
+    align-items: flex-end;
+}
+.features_img {
+    margin-right: 169px;
+}
+.features_heading, .choose_heading, .network h1, .trusted_heading, .subscribe_block h1 {
+    font-size: 35px;
+}
+.features_heading {
+    max-width: 383px;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+.features_text {
+    max-width: 427px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.features_list {
+    list-style: none;
+} 
+.fea_li_block{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    img {
+        margin-right: 12px;
+    }
+}
+.choose_your_plan_block {
+    padding-top: 80px;
+    padding-left: 174px;
+    padding-right: 174px;
+}
+.choose_heading, .text_choose_block, .network h1, .network p, .trusted_heading, .trusted_text{
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+.choose_heading {
+    margin-bottom: 20px;
+}
+.text_choose_block {
+    max-width: 555px;
+    line-height: 30px;
+}
+.mobile_select{
+    display: none;
+}
+.plans_block_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 330px);
+    grid-gap: 50px;
+    margin: 0 auto;
+    margin-top: 60px;
+    width: max-content;
+}
+.free_plan, .standart_plan, .premium_plan {
+    height: 760px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 2px solid #DDDDDD;
+    border-radius: 10px;
+    z-index: 1;
+    li {
+        font-size: 14px;
+    }
+    h2 {
+        font-size: 18px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    h1 {
+        font-size: 25px;
+        margin-bottom: 20px;
+        span {
+            color: $secondaryText;
+            font-weight: 400;
+        }
+    }
+    ul {
+        list-style: none;
+    }
+}
+.free_plan_img, .standart_plan_img, .premium_plan_img {
+    margin-top: 80px;
+}
+.free_button, .standart_button, .premium_button, .free_button_mobile, .standart_button_mobile, .premium_button_mobile{
+    @include nonActiveButtonTheme;
+    padding: 13px 62px;
+    border: 2px solid $buttonColor;
+    border-radius: 50px;
+    font-weight: 700;
+    z-index: 3;
+}
+.selected_plan_btn {
+    @include activeButtonTheme
+}
+.plan_li_block {
+    display: flex;
+    align-items: center;
+    height: max-content;
+    margin-bottom: 25px;
+    img {
+        margin-right: 25px;
+    }
+}
+.free_plan ul {
+    margin-bottom: 130px;
+}
+.standart_plan ul {
+    margin-bottom: 89px;
+}
+.premium_plan ul {
+    margin-bottom: 48px;
+}
+.selected_plan_block {
+    border: 2px solid $buttonColor;
+}
+.premium_button_shadow, .standart_button_shadow, .free_button_shadow {
+    background: rgba(245, 56, 56, 0.35);
+    filter: blur(27px);
+    border-radius: 60px;
+    z-index: 2;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+}
+.premium_button:hover + .premium_button_shadow {
+    opacity: 1;
+}
+.standart_button:hover + .standart_button_shadow {
+    opacity: 1;
+}
+.free_button:hover + .free_button_shadow {
+    opacity: 1;
+}
+.premium_button_shadow {
+    position: absolute;
+    width: 127.38px;
+    height: 45px;
+    left: 1056.31px;
+    top: 2420.55px;
+}
+.standart_button_shadow {
+    position: absolute;
+    width: 127.38px;
+    height: 45px;
+    left: 675.31px;
+    top: 2420.55px;
+}
+.free_button_shadow {
+    position: absolute;
+    width: 127.38px;
+    height: 45px;
+    left: 297.31px;
+    top: 2420.55px;
+}
+
+.get_product {
+    background-color: #F6F6F6;
+}
+.network {
+    margin-top: 150px;
+    margin-right: 150px;
+    margin-left: 150px;
+    height: 900px;
+    h1 {
+        max-width: 383px;
+        height: 100px;
+        line-height: 50px;
+    }
+    p {
+        text-align: center;
+        margin-top: 20px;
+        max-width: 555px;
+        height: 60px;
+        line-height: 30px;
+    }
+}
+.network_img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 105px;
+}
+.sponsored {
+    margin: 6px 150px 50px 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.trusted_heading {
+    max-width: 447px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+.trusted_text {
+    max-width: 555px;
+    height: 60px;
+    line-height: 30px;
+    margin-bottom: 60px;
+}
+.carousel {
+    display: flex;
+    margin: 0 auto;
+    height: 280px;
+    width: max-content;
+}
+.users {
+    height: 100%;
+    max-width: 400px;
+    border: 2px solid #DDDDDD;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 30px;
+    p {
+        color: $mainText;
+        margin-top: 20px;
+        line-height: 30px;
+        font-weight: 400;
+    }
+}
+.user_block {
+    display: flex;
+    justify-content: space-between;
+}
+.user {
+    display: flex;
+    align-items: center;
+    h5 {
+        color: $mainText;
+        font-size: 18px;
+        margin-bottom: 5px;
+        font-weight: 500;
+    }
+    h6 {
+        color: $secondaryText;
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+.selected_user {
+    border: 2px solid $buttonColor;
+    margin: 0 40px;
+}
+.other_user {
+    opacity: 0.2;
+}
+.user_info {
+    margin-left: 21px;
+}
+.user_score {
+    display: flex;
+    align-items: center;
+    h5 {
+        color: $mainText;
+        font-size: 16px;
+        font-weight: 400;
+        margin-right: 10px;
+    }
+}
+.carousel_control {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 150px;
+    margin-left: 150px;
+    height: 60px;
+    margin-top: 60px;
+}
+.control_dots {
+    display: flex;
+    align-items: center;
+}
+.control_dot {
+    height: 15px;
+    width: 15px;
+    background-color: $dotColor;
+    border-radius: 7.5px;
+    
+    margin-right: 15px;
+    margin-left: 15px;
+    
+    transition-property: box-shadow, top;
+    transition-duration: 0.5s;
+    position: relative;
+    top: 0;
+
+    &:hover {
+        box-shadow: 0px 4px 0px 0px $secondaryShadow;
+        top: -4px;
+    }
+    &:active {
+        box-shadow: none;
+        top: 0;
+    }
+}
+.control_arrows {
+    display: flex;
+    align-items: center;
+}
+.selected_dot {
+    width: 45px;
+    background-color: $buttonColor;
+    margin-right: 0;
+    margin-left: 0;
+
+    &:hover {
+        box-shadow: 0px 4px 0px 0px transparent;
+        top: 0;
+    }
+}
+.arrow_btn {
+    max-width: 60px;
+    height: 60px;
+    border: 2px solid $buttonColor;
+    border-radius: 30px;
+    padding: 19px 19px;
+    transition-property: box-shadow, top;
+    transition-duration: 0.5s;
+    position: relative;
+    top: 0;
+    &:hover {
+        box-shadow: 0px 4px 0px 0px $buttonShadowColor;
+        top: -4px;
+    }
+    &:active {
+        box-shadow: none;
+        top: 0;
+    }
+}
+#arrow_back {
+    margin-right: 20px;
+}
+#arrow_next {
+    background-color: $buttonColor;
+}
+.subscribe_block {
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    max-width: 1140px;
+    height: 233px;
+    position: relative;
+    top: 120px;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 58px 70px;
+    h1{
+        max-width: 371px;
+        height: 80px;
+        line-height: 45px;
+    }
+    p {
+        margin-top: 20px;
+    }
+}
+footer {
+    height: 550px;
+    background: linear-gradient(to bottom,#f1f1f1 0% 60%, #F6F6F6 85% 100%);
+    padding-top: 185px;
+    padding-left: 150px;
+    padding-right: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+.subscribe_shadow { 
+    position: absolute;
+    max-width: 1077.17px;
+    height: 250px;
+    left: 181.41px;
+    top: 4525.78px;
+
+    background: #0D1025;
+    opacity: 0.1;
+    filter: blur(57px);
+    border-radius: 10px;
+    z-index: 1;
+}
+.subscribe_btn {
+    @include activeButtonTheme;
+    padding: 18px 65px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    z-index: 4;
+    &:hover + .subscribe_btn_shadow{
+        opacity: 1;
+    }
+}
+
+.subscribe_btn_shadow {
+    position: absolute;
+    width: 211.83px;
+    height: 60px;
+    left: 850.09px;
+    top: 109.07px;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+
+    background: rgba(245, 56, 56, 0.35);
+    opacity: 0;
+    filter: blur(27px);
+    border-radius: 10px;
+    z-index: 3;
+}
+.about_company_text {
+    margin-top: 20px;
+    max-width: 340px;
+    line-height: 30px;
+}
+.social_media {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    margin-top: 30px;
+    margin-left: -20px;
+}
+.rights {
+    color: #AFB5C0;
+}
+.links {
+    display: flex;
+}
+.links_heading {
+    font-size: 18px;
+}
+.product {
+    margin-right: 130px;
+}
+.engage {
+    margin-right: 190px;
+}
+.links_list {
+    list-style: none;
+    margin-top: 20px;
+    li {
+        margin-bottom: 30px;
+        a {
+            font-weight: 400;
+        }
+    }
+}
+@media (max-width: 860px) {
+    footer {
+        display: block;
+        padding: 0;
+        padding-top: 40px;
+        height: max-content;
+        .logo {
+            margin-top: 0px;
+            .logo_name {
+                font-size: 20px;
+            }
+            img {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+    header {
+        padding: 0;
+        margin: 0 auto;
+        width: 300px;
+        margin-top: 10px;
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+    }
+    .other_user {
+        display: none;
+    }
+    p {
+        font-size: 12px;
+    }
+    .met_text {
+        margin-top: 20px;
+        line-height: 20px;
+    }
+    .logo {
+        margin-top: 4px;
+        img {
+            height: 15px;
+            width: 15px;
+        }
+    }
+    .logo_name {
+        font-size: 8px;
+        margin-left: 5px;
+    }
+    .navbar {
+        width: 180px;
+        padding: 0px 2px;
+    }
+    .sign_block {
+        width: max-content;
+    }
+    .sign_i {
+        margin-right: 5px;
+        font-size: 6px;
+    }
+    .sign_u {
+        font-size: 6px;
+        padding: 1px 2px;
+        &:hover {
+            box-shadow: none;
+            top: 0;
+        }
+    }
+    a {
+        font-size: 10px;
+        &:hover{
+            text-shadow: none;
+        }
+    }
+    .nav_element {
+        margin-right: 0;
+        margin-left: 5px;
+        font-size: 7px;
+    }
+    .meating {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        img {
+            width: 280px;
+            height: 175px;
+            margin: 0 auto;
+            order: 1;
+        }
+    }
+    .start_button {
+        margin-top: 15px;
+        width: 250px;
+
+        transition-property: box-shadow, top;
+        transition-duration: 0.5s;
+        box-shadow: 0 4px 0 0 $buttonShadowColor;
+        position: relative;
+        top: 0px;
+        &:active {
+            top: 4px;
+            box-shadow: none;
+        }
+    }
+    .btn_shadow {
+        display: none;
+    }
+    .properties {
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        height: max-content;
+        width: max-content;
+        align-items: center;
+        background-color: transparent;
+    }
+    .properties_shadow {
+       display: none;
+    }
+    .user_prop_block, .location_prop_block, .server_prop_block {
+        padding: 0;
+        margin-top: 30px;
+    }
+    .location_prop_block{
+        border: none;
+    }
+    .text_met_block {
+        width: 280px;
+        order: 2;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .met_heading {
+        margin-top: 30px;
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .features {
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .features_heading {
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 25px;
+        width: 280px;
+    }
+    .features_text {
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+        width: 280px;
+        line-height: 20px;
+        text-align: center;
+    }
+    .features_img {
+        width: 280px;
+        height: 228px;
+        display: block;
+        margin: 0 auto;
+    }
+    .features_list {
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 280px;
+        padding-left: 15px;
+    }
+    .fea_li_block {
+        li {
+            font-size: 15px;
+        }
+        img {
+            width: 15px;
+            height: 15px;
+        }
+    }
+    .choose_your_plan_block {
+        padding: 0;
+        padding-top: 80px;
+        height: 1050px;
+    }
+    .choose_heading {
+        width: 280px;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 25px;
+        line-height: 25px;
+    }
+    .text_choose_block {
+        width: 180px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+        text-align: center;
+        line-height: 20px;
+    }
+    .mobile_select{
+        display: flex;
+        margin: 0 auto;
+        width: max-content;
+        margin-top: 30px;
+        & :nth-child(2){
+            margin: 0 10px;
+        }
+    }
+    .mobile_select_btn {
+        @include nonActiveButtonTheme;
+        padding: 2px 6px;
+        border: 2px solid $buttonColor;
+        border-radius: 10px;
+        font-weight: 600;
+        position: relative;
+        top: -4px;
+        box-shadow: 0 4px 0 0 $buttonShadowColor;
+        transition-property: top, box-shadow;
+        transition-duration: 0.5s;
+        &:active {
+            box-shadow: none;
+            top: 0px;
+        }
+    }
+    .selected_mobile_btn {
+        @include activeButtonTheme
+    }
+    .plans_block_grid {
+        display: block;
+    }
+    .free_plan, .standart_plan, .premium_plan {
+        width: 300px;
+        height: max-content;
+        padding-bottom: 30px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        display: none;
+    }
+    .free_button, .standart_button, .premium_button {
+        position: relative;
+        top: 0px;
+        box-shadow: 0 4px 0 0 $buttonShadowColor;
+        transition-property: top, box-shadow;
+        transition-duration: 0.5s;
+        &:active {
+            box-shadow: none;
+            top: 4px;
+        }
+    }
+    .subscribe_btn {
+        position: relative;
+        top: 0px;
+        box-shadow: 0 4px 0 0 $buttonShadowColor;
+        transition-property: top, box-shadow;
+        transition-duration: 0.5s;
+        &:active{
+            box-shadow: none;
+            top: 4px;
+        }
+    }
+    
+    .free_button_shadow, .standart_button_shadow, .premium_button_shadow {
+        display: none;
+    }
+    .network {
+        margin: 0;
+        margin-top: 50px;
+        height: max-content;
+        h1 {
+            font-size: 25px;
+            line-height: 25px;
+            width: 280px;
+            height: max-content;
+        }
+        p {
+            width: 280px;
+            line-height: 20px;
+        }
+    }
+    .network_img{
+        width: 297px;
+        height: 150px;
+        margin: 0 auto;
+    }
+    .sponsored {
+        margin: 0 auto;
+        align-items: center;
+        justify-content: flex-start;
+        width: max-content;
+    }
+    .netflix_logo {
+        width: 56px;
+        height: 31px;
+    }
+    .reddit_logo {
+        width: 43px;
+        height: 13px;
+    }
+    .amazon_logo {
+        width: 77px;
+        height: 57px;
+    }
+    .discord_logo {
+        width: 52px;
+        height: 17px;
+    }
+    .spotify_logo {
+        width: 48px;
+        height: 14px;
+    }
+    .trusted_heading {
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 25px;
+        width: 280px;
+        height: max-content;
+    }
+    .trusted_text {
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+        width: 280px;
+        line-height: 20px;
+        text-align: center;
+    }
+    .carousel {
+        display: block;
+        height: max-content;
+        margin: 0 auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        width: 200px;
+    }
+    .user_info {
+        margin-left: 10px;
+        h5 {
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+        h6 {
+            display: none;
+        }
+    }
+    .users {
+        padding: 10px;
+        height: 273px;
+        width: 200px;
+        margin-right: 0;
+    }
+    
+    .selected_user {
+        margin: 0;
+    }
+    .carousel_control {
+        margin: 0 auto;
+        width: 280px;
+        flex-direction: column;
+        align-items: center;
+        height: max-content;
+    }
+    .control_dots {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .arrow_btn {
+        width: 25px;
+        height: 25px;
+        border-radius: 12.5px;
+        padding: 3px 2px;
+        box-shadow: 0px 4px 0px 0px $buttonShadowColor;
+        top: -4px;
+        &:hover {
+            box-shadow: 0px 4px 0px 0px $buttonShadowColor;
+            top: -4;
+        }
+        &:active {
+            box-shadow: none;
+            top: 0;
+        }
+        img {
+            width: 15px;
+            height: 15px;
+        }
+    }
+    .subscribe_block {
+        background-color: transparent;
+        margin: 0 auto;
+        width: max-content;
+        padding: 0;
+        height: max-content;
+        position: static;
+        margin-top: 50px;
+    }
+    .subscribe_text_block {
+        display: none;
+    }
+    .subscribe_shadow {
+        display: none;
+    }
+    .subscribe_btn_shadow {
+        display: none;
+    }
+    .get_product {
+        height: max-content;
+        padding-bottom: 50px;
+    }
+    .product {
+        margin-right: 20px;
+    }
+    .engage {
+        margin-right: 20px;
+    }
+    .about_company {
+        width: max-content;
+        margin: 0 auto;
+    }
+    .about_company_text {
+        width: 280px;
+    }
+    .social_media {
+        margin-top: 10px;
+    }
+    .links {
+        margin: 0 auto;
+        margin-top: 50px;
+        width: max-content;
+    }
+    .links_heading {
+        width: max-content;
+    }
+}
